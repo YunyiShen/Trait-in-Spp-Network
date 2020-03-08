@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1583706892903.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2888282221",
+    "id" : "7755F876",
+    "lastKnownWriteTime" : 1583708535,
+    "last_content_update" : 1583708535870,
+    "path" : "/media/yunyi/Academia/UW Lab jobs/2. ISING Occupancy model/8.Spp_network_reg/./R/Main_Sampler.R",
+    "project_path" : "R/Main_Sampler.R",
+    "properties" : {
+        "cursorPosition" : "33,22",
+        "scrollLine" : "27"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
