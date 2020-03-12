@@ -59,9 +59,11 @@ para_prior = list( beta_occu = rep(1000,nspp * ncol(envX))
                    ,eta_inter = rep(1000,nspp)
                    )
 
+ini = theta
+ini$spp_mat=NULL
 
 kk = Net.fit.Murray.sampler(Z = t(Z_simu), X = envX, spp_design = spp_design
-                                            , mcmc.iter = 5000, burn.in = 500
+                                            , mcmc.iter = 500, burn.in = 50
                                             , vars_prop = vars_prop
                                             , para_prior = para_prior
 
@@ -70,7 +72,7 @@ kk = Net.fit.Murray.sampler(Z = t(Z_simu), X = envX, spp_design = spp_design
                                             , dist_mainland = distM_mainland+1 , link_mainland =  distM_mainland +1
                                             , int_range_intra="nn",int_range_inter="nn"                                          
                                             , seed = 42
-                                            , ini = theta,thin.by = 1,report.by = 30,nIter = 50,method = "CFTP")
+                                            , ini = ini,thin.by = 1,report.by = 30,nIter = 50,method = "CFTP")
 
 
 save.image("Test_large_grid_Competition_50K_with_intra.RData")

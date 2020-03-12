@@ -199,7 +199,7 @@ Net.fit.Murray.sampler = function(Z, X, spp_design # some trait based measuremen
       
     
     if(i %% thin.by==0){
-      for(j in 1:length(theta_curr)){
+      for(j in 1:(length(theta_curr)-1)){
         theta.mcmc[[j]][i/thin.by,] =as.vector( theta_curr[[j]])
       } # saving the results
     }

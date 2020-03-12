@@ -2,17 +2,17 @@
     "debugBreakpointsState" : {
         "breakpoints" : [
             {
-                "editor_line_number" : 89,
+                "editor_line_number" : 46,
                 "editor_state" : 1,
-                "function_name" : "Net.fit.Murray.sampler",
-                "function_steps" : "32,4,2",
-                "id" : 0,
+                "function_name" : "Murray_ratio_occu_theta",
+                "function_steps" : "6",
+                "id" : 7,
                 "is_package_breakpoint" : false,
                 "is_pending_debug_completion" : false,
-                "line_number" : 89,
+                "line_number" : 46,
                 "needs_updated_steps" : false,
                 "package_name" : "",
-                "path" : "/media/yunyi/Academia/UW Lab jobs/2. ISING Occupancy model/8.Spp_network_reg/R/Main_Sampler.R",
+                "path" : "/media/yunyi/Academia/UW Lab jobs/2. ISING Occupancy model/8.Spp_network_reg/R/Murray_ratio.R",
                 "state" : 1,
                 "type" : 0
             }
