@@ -7,12 +7,12 @@ Rcpp::sourceCpp("src/IsingCpp_CFTP_sparse.cpp")
 
 
 ## generate graph 
-n_grids = 15 # 15 by 15 grid system
+n_grids = 12 # 15 by 15 grid system
 link_inner = adjacency.matrix(n_grids) # nearest neighborhood 
 link_outer = link_inner
 
 ###### True Parameter Setting ######
-nspp = 5
+nspp = 6
 spp_neig = matrix(1,nspp,nspp)
 diag(spp_neig)=0
 spp_neig = as(spp_neig,'dsCMatrix')
@@ -61,19 +61,18 @@ para_prior = list( beta_occu = rep(1000,nspp * ncol(envX))
 
 
 kk = Net.fit.Murray.sampler(Z = t(Z_simu), X = envX, spp_design = spp_design
-                                            , mcmc.iter = 5000, burn.in = 500
+                                            , mcmc.iter = 50000, burn.in = 5000
                                             , vars_prop = vars_prop
                                             , para_prior = para_prior
 
                                             , uni_prior = F
                                             , distM=link_map[[1]]+1,link_map=link_map
-                                            , dist_mainland = distM_mainland+1 , link_mainland =  distM_mainland +1
+                                            , dist_mainland = distM_mainland , link_mainland =  distM_mainland 
                                             , int_range_intra="nn",int_range_inter="nn"                                          
                                             , seed = 42
-                                            , ini = theta,thin.by = 1,report.by = 30,nIter = 50,method = "CFTP")
+                                            , ini = theta,thin.by = 10,report.by = 100,nIter = 50,method = "CFTP")
 
 
-save.image("Test_large_grid_Competition_50K_with_intra.RData")
 
 
 
